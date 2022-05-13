@@ -23,7 +23,7 @@ rm mubeamresampler.fcl
 echo '#include "Production/JobConfig/pileup/MuBeamResampler.fcl"' >> mubeamresampler.fcl
 echo physics.filters.beamResampler.mu2e.MaxEventsToSkip: ${nskip} >> mubeamresampler.fcl
 #
-generate_fcl --dsconf=$1$3 --dsowner=brownd --run-number=1202 --description=MuBeamResampler --events-per-job=400000 --njobs=$4 \
+generate_fcl --dsconf=$1$3 --dsowner=mu2e --run-number=1202 --description=MuBeamResampler --events-per-job=400000 --njobs=$4 \
   --embed mubeamresampler.fcl --auxinput=1:physics.filters.beamResampler.fileNames:MuBeamCat.txt
 for dirname in 000 001 002 003 004 005 006 007 008 009; do
  if test -d $dirname; then

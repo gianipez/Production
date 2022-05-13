@@ -23,7 +23,7 @@ rm neutralsresampler.fcl
 echo '#include "Production/JobConfig/pileup/NeutralsResampler.fcl"' >> neutralsresampler.fcl
 echo physics.filters.neutralsResampler.mu2e.MaxEventsToSkip: ${nskip} >> neutralsresampler.fcl
 #
-generate_fcl --dsconf=$1$3 --dsowner=brownd --run-number=1202 --description=NeutralsResampler --events-per-job=400000 --njobs=$4 \
+generate_fcl --dsconf=$1$3 --dsowner=mu2e --run-number=1202 --description=NeutralsResampler --events-per-job=400000 --njobs=$4 \
   --embed neutralsresampler.fcl --auxinput=1:physics.filters.neutralsResampler.fileNames:NeutralsCat.txt
 for dirname in 000 001 002 003 004 005 006 007 008 009; do
  if test -d $dirname; then

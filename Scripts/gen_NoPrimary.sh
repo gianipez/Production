@@ -19,7 +19,7 @@ eventsperjob=$4
 #
 # now generate the fcl
 #
-generate_fcl --dsconf=${primaryconf} --dsowner=brownd --run-number=1202 --description=${primary} --events-per-job=${eventsperjob} --njobs=${njobs} \
+generate_fcl --dsconf=${primaryconf} --dsowner=mu2e --run-number=1202 --description=${primary} --events-per-job=${eventsperjob} --njobs=${njobs} \
   --include Production/JobConfig/primary/${primary}.fcl
 for dirname in 000 001 002 003 004 005 006 007 008 009; do
  if test -d $dirname; then

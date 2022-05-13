@@ -23,7 +23,7 @@ rm elebeamresampler.fcl
 echo '#include "Production/JobConfig/pileup/EleBeamResampler.fcl"' >> elebeamresampler.fcl
 echo physics.filters.beamResampler.mu2e.MaxEventsToSkip: ${nskip} >> elebeamresampler.fcl
 #
-generate_fcl --dsconf=$1$3 --dsowner=brownd --run-number=1202 --description=EleBeamResampler --events-per-job=400000 --njobs=$4 \
+generate_fcl --dsconf=$1$3 --dsowner=mu2e --run-number=1202 --description=EleBeamResampler --events-per-job=400000 --njobs=$4 \
   --embed elebeamresampler.fcl --auxinput=1:physics.filters.beamResampler.fileNames:EleBeamCat.txt
 for dirname in 000 001 002 003 004 005 006 007 008 009; do
  if test -d $dirname; then

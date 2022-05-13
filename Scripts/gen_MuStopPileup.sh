@@ -23,7 +23,7 @@ rm targetstopresampler.fcl
 echo '#include "Production/JobConfig/pileup/MuStopPileup.fcl"' >> targetstopresampler.fcl
 echo physics.filters.TargetStopResampler.mu2e.MaxEventsToSkip: ${nskip} >> targetstopresampler.fcl
 #
-generate_fcl --dsconf=$1$3 --dsowner=brownd --run-number=1202 --description=TargetStopResampler --events-per-job=400000 --njobs=$4 \
+generate_fcl --dsconf=$1$3 --dsowner=mu2e --run-number=1202 --description=TargetStopResampler --events-per-job=400000 --njobs=$4 \
   --embed targetstopresampler.fcl --auxinput=1:physics.filters.TargetStopResampler.fileNames:TargetStopsCat.txt
 for dirname in 000 001 002 003 004 005 006 007 008 009; do
  if test -d $dirname; then
